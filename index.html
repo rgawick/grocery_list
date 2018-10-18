@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="app.css" type="text/css"/>
+  <title>Grocery Cart App</title>
+</head>
+<body>
+  <h3>Enter Item to Add</h3>
+  <input type="text" id="itemTextBox" placeholder="Enter item name" />
+  <label> Select Grocery Store </label>
+  <select id="storeSelect">
+    <option value="Kroger">Kroger</option>
+    <option value="HEB">HEB</option>
+    <option value="Randalls">Randalls</option>
+    <option value="WholeFoods">Whole Foods</option>
+    <option value="Costco">Costco</option>
+  </select>
+  <button id="orderBtn">Order</button>
+
+  <div id="container">
+  <button id="displayAllBtn">Display All Orders</button>
+  <ul id="ordersList">
+  </ul>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyCuSTbyDHMtQ_QeUiSwgf6Xw76PMOLMk-A",
+      authDomain: "grocery-cart-app.firebaseapp.com",
+      databaseURL: "https://grocery-cart-app.firebaseio.com",
+      projectId: "grocery-cart-app",
+      storageBucket: "grocery-cart-app.appspot.com",
+      messagingSenderId: "516690962038"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="app.js"> </script>
+</body>
+</html>
